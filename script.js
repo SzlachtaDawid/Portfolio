@@ -38,9 +38,9 @@ const kontaktHeight = document.querySelector('section.kontakt').clientHeight
 
 const scrollwindow = function () {
     const windows = window.scrollY
-    console.log(windows)
-    console.log(hobbyTop)
-    console.log(hobbyHeight)
+    // console.log(windows)
+    // console.log(hobbyTop)
+    // console.log(hobbyHeight)
     if (windows > hobbyTop - hobbyHeight / 3) {
         hobby.style.transition = '2s'
         hobby.style.opacity = '100%'
@@ -65,14 +65,6 @@ const scrollwindow = function () {
     } else {
         portfolio.style.opacity = '0'
     }
-    if (windows + kontaktHeight * 5 > kontaktTop) {
-        kontakt.style.transition = '2s'
-        kontakt.style.opacity = '100%'
-    } else {
-        kontakt.style.opacity = '0'
-    }
 }
 
 window.addEventListener('scroll', scrollwindow)
-
-// alert('W wersji moblinej na małych rodzielczościach strona nie jest odpowiednio zoptymalizowana. Pojawiają się delikatne błędy i nie dociągnięcia z powodu małej ilości czasu. Wszystko powinno zostac poprawione już nie długo. :)')

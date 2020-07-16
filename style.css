@@ -336,6 +336,10 @@ div.me {
         font-size: 27px;
     }
 
+    .me img {
+        bottom: 8%;
+    }
+
 }
 
 @media (orientation: portrait) and (max-width:360px) {
