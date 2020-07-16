@@ -1,2 +1,3 @@
-## TEST
-test lorem
+## MOJA STRONA CV
+Witam.
+Powyższa strona została stworzona całkowicie przeze mnie. Udostępniam ją w celach rekrutacyjnych. 
