@@ -170,7 +170,7 @@ nav.navi {
     }
 }
 
-@media (orientation: portrait) and (max-width:375px) {
+@media (orientation: portrait) and (max-width:450px) {
     .navi a {
         font-size: 20px;
         margin: 10px 20px 50px;
@@ -327,7 +327,7 @@ div.me {
 
 }
 
-@media (orientation: portrait) and (max-width:375px) {
+@media (orientation: portrait) and (max-width:450px) {
     .me p {
         font-size: 17px;
     }
@@ -496,7 +496,7 @@ div.no {
     }
 }
 
-@media (orientation: portrait) and (max-width:375px) {
+@media (orientation: portrait) and (max-width:450px) {
     section.technology h1 {
         font-size: 50px;
     }
@@ -636,7 +636,7 @@ section.portfolio div.gallery a {
     }
 }
 
-@media (orientation: portrait) and (max-width:375px) {
+@media (orientation: portrait) and (max-width:450px) {
     section.portfolio {
         height: 1269px;
         /* ustawione na sztywno ! nie moge znaleźć powodu dlaczego div.gallery(dziecko) nie nadaje rozmiaru sowjemu rodzicowi section.portfolio  */
@@ -733,7 +733,7 @@ section.hobby div.gallery img {
     }
 }
 
-@media (orientation: portrait) and (max-width:375px) {
+@media (orientation: portrait) and (max-width:450px) {
     /* section.hobby {
         margin-top: 300px;
     } */
@@ -810,7 +810,7 @@ section.kontakt a {
     }
 }
 
-@media (orientation: portrait) and (max-width:375px) {
+@media (orientation: portrait) and (max-width:450px) {
     section.kontakt h1 {
         font-size: 40px;
     }
