@@ -1,0 +1,828 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Russo One', sans-serif;
+}
+
+
+body {
+    background-color: #050801;
+}
+
+h1 {
+    color: white;
+}
+
+p {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* NAVIGACJA */
+nav.navi {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    flex-wrap: wrap;
+}
+
+.navi a {
+    position: relative;
+    display: inline-block;
+    padding: 25px 30px;
+    margin: 40px 20px;
+    color: #03e9f4;
+    font-size: 24px;
+    text-decoration: none;
+    text-transform: uppercase;
+    overflow: hidden;
+    transition: 0.5s;
+    letter-spacing: 4px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
+}
+
+.navi a:hover {
+    background-color: #03e9f4;
+    color: #050801;
+    box-shadow: 0 0 5px #03e9f4,
+        0 0 25px #03e9f4,
+        0 0 50px #03e9f4,
+        0 0 200px #03e9f4;
+}
+
+.navi a span {
+    position: absolute;
+    display: block;
+}
+
+.navi a span:nth-of-type(1) {
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #03e9f4);
+    animation: animate1 1s linear infinite;
+}
+
+@keyframes animate1 {
+    0% {
+        left: -100%;
+    }
+
+    50%,
+    100% {
+        left: 100%;
+    }
+}
+
+.navi a span:nth-of-type(2) {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #03e9f4);
+    animation: animate2 1s linear infinite;
+    animation-delay: 0.25s;
+}
+
+@keyframes animate2 {
+    0% {
+        top: -100%;
+    }
+
+    50%,
+    100% {
+        top: 100%;
+    }
+}
+
+.navi a span:nth-of-type(3) {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #03e9f4);
+    animation: animate3 1s linear infinite;
+    animation-delay: 0.5s;
+}
+
+@keyframes animate3 {
+    0% {
+        right: -100%;
+    }
+
+    50%,
+    100% {
+        right: 100%;
+    }
+}
+
+.navi a span:nth-of-type(4) {
+    bottom: -100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #03e9f4);
+    animation: animate4 1s linear infinite;
+    animation-delay: 0.75s;
+}
+
+@keyframes animate4 {
+    0% {
+        bottom: -100%;
+    }
+
+    50%,
+    100% {
+        bottom: 100%;
+    }
+}
+
+@media (orientation: landscape) and (max-width:820px) {
+    .navi a {
+        font-size: 15px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:641px) {
+    .navi a {
+        /* font-size: 10px; */
+        padding: 10px;
+        margin: 5px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:1024px) {
+    .navi a {
+        font-size: 30px;
+        margin: 50px 20px 70px;
+    }
+
+    nav.navi {
+        flex-direction: column;
+    }
+}
+
+@media (orientation: portrait) and (max-width:375px) {
+    .navi a {
+        font-size: 20px;
+        margin: 10px 20px 50px;
+    }
+
+    nav.navi {
+        flex-direction: column;
+    }
+}
+
+@media (orientation: portrait) and (max-width:360px) {
+    .navi a {
+        font-size: 10px;
+        margin: 20px 20px;
+    }
+
+    nav.navi {
+        flex-direction: column;
+    }
+}
+
+
+
+
+/* NAWIGACJA MINI */
+
+nav.mininavi {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    background-color: #03e9f4;
+    z-index: 2;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+}
+
+nav.mininavi p {
+    color: black;
+    padding: 1px 100px;
+    cursor: pointer;
+    transition: 0.1s;
+}
+
+nav.mininavi p:hover {
+    border-bottom: 8px solid #03e9f4;
+}
+
+@media (orientation: landscape) and (max-width:820px) {
+    nav.mininavi p {
+        font-size: 20px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:641px) {
+    nav.mininavi p {
+        font-size: 15px;
+    }
+}
+
+/* O MNIE */
+
+div.me {
+    position: relative;
+    color: #ffffff;
+    font-size: 40px;
+    min-height: 100vh;
+    padding-top: 5%;
+
+}
+
+.me div {
+    position: relative;
+    text-align: center;
+    width: 70%;
+}
+
+.me img {
+    position: absolute;
+    right: 3%;
+    bottom: 15%;
+    border: 2px solid #03e9f4;
+    width: 25%;
+}
+
+
+.me p {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 70%;
+    font-size: 25px;
+    margin-top: 30px;
+}
+
+@media (orientation: landscape) and (max-width:1020px) {
+    .me p {
+        font-size: 22px;
+    }
+
+    div.me {
+        font-size: 37px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:820px) {
+    .me p {
+        font-size: 13px;
+    }
+
+    div.me {
+        font-size: 17px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:641px) {
+    .me p {
+        font-size: 12px;
+    }
+
+    div.me {
+        font-size: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:1024px) {
+    .me p {
+        font-size: 30px;
+    }
+
+    div.me {
+        font-size: 40px;
+    }
+
+    .me div {
+        width: 100%;
+    }
+
+    .me img {
+        right: 50%;
+        bottom: 10%;
+        transform: translateX(50%);
+        width: 40%;
+    }
+}
+
+@media (orientation: portrait) and (max-width:800px) {
+    .me p {
+        font-size: 23px;
+    }
+
+    div.me {
+        font-size: 33px;
+    }
+
+}
+
+@media (orientation: portrait) and (max-width:375px) {
+    .me p {
+        font-size: 17px;
+    }
+
+    div.me {
+        font-size: 27px;
+    }
+
+}
+
+@media (orientation: portrait) and (max-width:360px) {
+    .me p {
+        font-size: 12px;
+    }
+
+    div.me {
+        font-size: 17px;
+    }
+
+}
+
+/* TECHNOLOGIA */
+section.technology {
+    color: white;
+    min-height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+
+}
+
+section.technology div.tech {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+section.technology h1 {
+    font-size: 100px;
+}
+
+section.technology h2 {
+    font-size: 60px;
+    border: 2px solid #03e9f4;
+    width: 50%;
+    margin: 0 auto;
+}
+
+div.yes p {
+    font-size: 80px;
+}
+
+div.yes {
+    margin: 50px auto;
+    font-size: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+div.no {
+    margin: 50px auto 0;
+    padding-bottom: 20px;
+    font-size: 80px;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media (orientation: landscape) and (max-width:1020px) {
+    section.technology h1 {
+        font-size: 90px;
+    }
+
+    section.technology h2 {
+        font-size: 50px;
+    }
+
+
+    div.yes p {
+        font-size: 60px;
+    }
+
+    div.tech div {
+        font-size: 60px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:820px) {
+    section.technology h1 {
+        font-size: 60px;
+    }
+
+    section.technology h2 {
+        font-size: 30px;
+    }
+
+
+    div.yes p {
+        font-size: 40px;
+    }
+
+    div.tech div {
+        font-size: 40px;
+    }
+}
+
+@media (orientation: landscape) and (max-width:641px) {
+    section.technology h1 {
+        font-size: 50px;
+    }
+
+    section.technology h2 {
+        font-size: 25px;
+    }
+
+
+    div.yes p {
+        font-size: 30px;
+    }
+
+    div.tech div {
+        font-size: 30px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:1024px) {
+    section.technology h1 {
+        font-size: 120px;
+    }
+
+    section.technology h2 {
+        font-size: 90px;
+        width: 70%;
+    }
+
+    .me div {
+        width: 100%;
+    }
+
+    div.yes p {
+        font-size: 90px;
+    }
+
+    div.tech div {
+        font-size: 90px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:800px) {
+    section.technology h1 {
+        font-size: 100px;
+    }
+
+    section.technology h2 {
+        font-size: 65px;
+        width: 70%;
+    }
+
+    div.yes p {
+        font-size: 70px;
+    }
+
+    div.tech div {
+        font-size: 70px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:375px) {
+    section.technology h1 {
+        font-size: 50px;
+    }
+
+    section.technology h2 {
+        font-size: 35px;
+        width: 70%;
+    }
+
+    div.yes p {
+        font-size: 40px;
+    }
+
+    div.tech div {
+        font-size: 40px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:360px) {
+    section.technology h1 {
+        font-size: 40px;
+    }
+
+    section.technology h2 {
+        font-size: 30px;
+        width: 70%;
+    }
+
+    div.yes p {
+        font-size: 30px;
+    }
+
+    div.tech div {
+        font-size: 30px;
+    }
+}
+
+/* PORTFOLIO */
+
+section.portfolio {
+    min-height: 100vh;
+}
+
+section.portfolio h1 {
+    margin-top: 20px;
+    width: 100%;
+    text-align: center;
+    font-size: 120px;
+}
+
+section.portfolio p {
+    margin: 0 10px;
+}
+
+section.portfolio div.gallery {
+    /* height: 100%; */
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.portfolio div.gallery img {
+    border: 2px solid #03e9f4;
+}
+
+section.portfolio div.gallery a {
+    margin: 20px 20px;
+}
+
+@media (orientation: landscape) and (max-width:1020px) {
+    section.portfolio h1 {
+        font-size: 100px;
+    }
+
+    section.portfolio p {
+        font-size: 25px;
+        padding: 0 10px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width:820px) {
+    section.portfolio h1 {
+        margin-top: 30px;
+        font-size: 70px;
+    }
+
+    section.portfolio p {
+        font-size: 20px;
+        padding: 0 10px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width:641px) {
+    section.portfolio h1 {
+        font-size: 50px;
+    }
+
+    section.portfolio p {
+        font-size: 15px;
+        padding: 0 10px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:1024px) {
+    section.portfolio h1 {
+        font-size: 150px;
+    }
+
+    section.portfolio p {
+        font-size: 35px;
+    }
+
+    section.portfolio {
+        position: relative;
+    }
+
+    section.portfolio div.gallery {
+        width: 100%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%)
+    }
+}
+
+@media (orientation: portrait) and (max-width:800px) {
+    section.portfolio h1 {
+        font-size: 120px;
+    }
+
+    section.portfolio p {
+        font-size: 30px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:375px) {
+    section.portfolio {
+        height: 1269px;
+        /* ustawione na sztywno ! nie moge znaleźć powodu dlaczego div.gallery(dziecko) nie nadaje rozmiaru sowjemu rodzicowi section.portfolio  */
+    }
+
+    section.portfolio h1 {
+        font-size: 60px;
+    }
+
+    section.portfolio p {
+        font-size: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:360px) {
+
+    section.portfolio h1 {
+        font-size: 50px;
+    }
+
+    section.portfolio p {
+        font-size: 12px;
+    }
+
+    section.portfolio img {
+        max-width: 300px;
+    }
+
+}
+
+
+
+/* HOBBY    */
+
+section.hobby {
+    min-height: 100vh;
+}
+
+section.hobby h1 {
+    font-size: 100px;
+    text-align: center;
+    margin: 20px;
+}
+
+section.hobby p {
+    padding: 0 20px;
+}
+
+section.hobby div.gallery {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+section.hobby div.gallery img {
+    border: 2px solid #03e9f4;
+    margin: 30px 20px
+}
+
+@media (orientation: landscape) and (max-width:1024px) {
+    section.hobby h1 {
+        font-size: 90px;
+    }
+
+    section.hobby p {
+        font-size: 25px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width:820px) {
+    section.hobby h1 {
+        font-size: 50px;
+    }
+
+    section.hobby p {
+        font-size: 15px;
+    }
+
+}
+
+@media (orientation: portrait) and (max-width:1024px) {
+    section.hobby h1 {
+        font-size: 150px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:800px) {
+    section.hobby h1 {
+        font-size: 100px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:375px) {
+    /* section.hobby {
+        margin-top: 300px;
+    } */
+
+    section.hobby h1 {
+        font-size: 100px;
+    }
+
+    section.hobby p {
+        font-size: 15px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:360px) {
+
+    section.hobby h1 {
+        font-size: 65px;
+    }
+
+    section.hobby p {
+        font-size: 12px;
+    }
+
+    section.hobby img {
+        max-width: 300px;
+    }
+}
+
+/* KONTAKT   */
+
+section.kontakt {
+    text-align: center;
+    margin: 50px;
+}
+
+section.kontakt h1 {
+    font-size: 130px;
+}
+
+section.kontakt a {
+    color: white;
+    font-size: 50px;
+}
+
+@media (orientation: landscape) and (max-width:1025px) {
+    section.kontakt h1 {
+        font-size: 100px;
+    }
+
+    section.kontakt a {
+        font-size: 35px;
+    }
+
+}
+
+@media (orientation: landscape) and (max-width:641px) {
+    section.kontakt h1 {
+        font-size: 50px;
+    }
+
+    section.kontakt a {
+        font-size: 15px;
+    }
+
+}
+
+@media (orientation: portrait) and (max-width:800px) {
+    section.kontakt h1 {
+        font-size: 80px;
+    }
+
+    section.kontakt a {
+        font-size: 35px;
+    }
+}
+
+@media (orientation: portrait) and (max-width:375px) {
+    section.kontakt h1 {
+        font-size: 40px;
+    }
+
+    section.kontakt a {
+        font-size: 15px;
+    }
+}
+
+/* FOOTER  */
+footer {
+    color: white;
+    text-align: center;
+    margin-bottom: 50px;
+}
