@@ -1,4 +1,4 @@
-## MOJA STRONA CV
+## Strona Wizytówka
 Witam.
-Powyższa strona została stworzona całkowicie przeze mnie. Udostępniam ją w celach rekrutacyjnych. 
+Powyższa strona została stworzona w celu utrwalenie i praktycznego wykorzystania umiejętności html/css/js.
 Dawid Szlachta.
